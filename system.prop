@@ -104,7 +104,7 @@ persist.sys.wfd.virtual=1
 
 # Qualcomm
 persist.data.qmi.adb_logmask=0
-ro.qualcomm.cabl=0
+ro.qualcomm.cabl=2
 ro.sys.fw.dex2oat_thread_count=8
 
 #low audio flinger standby delay to reduce power consumption

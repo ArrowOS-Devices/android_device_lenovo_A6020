@@ -68,6 +68,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PACKAGES += \
     LenovoDoze
 
+# Encryption
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-qti.qsee
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8916

@@ -61,6 +61,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_buffer_age=false
 
+# Encryption
+PRODUCT_PACKAGES += \
+    vendor.qti.hardware.cryptfshw@1.0-service-dlsym-qti
+
 # Keystore
 PRODUCT_PACKAGES += \
     keystore.msm8916

@@ -84,12 +84,12 @@ case "$target" in
             echo "60000 400000:10000 533333:70000 800000:80000 960000:90000" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
             echo 99 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
             echo 60000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
-            echo 200000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
+            echo 533333 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
             echo 480000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
             echo "90 200000:73 345600:78 400000:86 533333:73 800000:90 960000:84 1113600:98 1363200:99" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
-            echo 200000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+            echo 400000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/boost
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration
             echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/align_windows
@@ -105,11 +105,11 @@ case "$target" in
             echo 91 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
             echo 60000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
             echo 480000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
-            echo 200000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
+            echo 499200 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
-            echo "90 200000:73 249600:65 499200:85 800000:90 998400:87" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
+            echo "90 200000:73 249600:65 499200:85 800000:90 998400:95" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
-            echo 200000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+            echo 499200 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/boost
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration
             echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/align_windows
@@ -120,6 +120,20 @@ case "$target" in
 
             # enable thermal core_control now
             echo 1 > /sys/module/msm_thermal/core_control/enabled
+
+            # enable core control
+            echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+            echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
+            echo 68 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
+            echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
+            echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
+            echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
+            echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster
+            echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+            echo 20 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
+            echo 5 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
+            echo 5000 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
+            echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/not_preferred
 
             # Bring up all cores online
             echo 1 > /sys/devices/system/cpu/cpu1/online
@@ -205,12 +219,12 @@ case "$target" in
             echo "60000 400000:10000 533333:70000 800000:80000 960000:85000 1113600:90000 1344000:95000" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/above_hispeed_delay
             echo 99 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/go_hispeed_load
             echo 60000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_rate
-            echo 200000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
+            echo 533333 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/hispeed_freq
             echo 480000 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/timer_slack
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/io_is_busy
             echo "90 200000:73 345600:78 400000:86 533333:73 800000:90 960000:84 1113600:98 1344000:100" > /sys/devices/system/cpu/cpu0/cpufreq/interactive/target_loads
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/min_sample_time
-            echo 200000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+            echo 400000 > /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/boost
             echo 0 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/boostpulse_duration
             echo 1 > /sys/devices/system/cpu/cpu0/cpufreq/interactive/align_windows
@@ -226,11 +240,11 @@ case "$target" in
             echo 91 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/go_hispeed_load
             echo 60000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_rate
             echo 480000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/timer_slack
-            echo 200000 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
+            echo 499200 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/hispeed_freq
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/io_is_busy
             echo "72 200000:73 249600:65 499200:85 800000:90 998400:95 1113600:100" > /sys/devices/system/cpu/cpu4/cpufreq/interactive/target_loads
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/min_sample_time
-            echo 200000 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+            echo 499200 > /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/boost
             echo 0 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/boostpulse_duration
             echo 1 > /sys/devices/system/cpu/cpu4/cpufreq/interactive/align_windows
@@ -241,6 +255,20 @@ case "$target" in
 
             # enable thermal core_control now
             echo 1 > /sys/module/msm_thermal/core_control/enabled
+
+            # enable core control
+            echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/min_cpus
+            echo 2 > /sys/devices/system/cpu/cpu0/core_ctl/max_cpus
+            echo 68 > /sys/devices/system/cpu/cpu0/core_ctl/busy_up_thres
+            echo 40 > /sys/devices/system/cpu/cpu0/core_ctl/busy_down_thres
+            echo 100 > /sys/devices/system/cpu/cpu0/core_ctl/offline_delay_ms
+            echo 4 > /sys/devices/system/cpu/cpu0/core_ctl/task_thres
+            echo 1 > /sys/devices/system/cpu/cpu0/core_ctl/is_big_cluster
+            echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
+            echo 20 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
+            echo 5 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
+            echo 5000 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
+            echo 1 > /sys/devices/system/cpu/cpu4/core_ctl/not_preferred
 
             # Bring up all cores online
             echo 1 > /sys/devices/system/cpu/cpu1/online

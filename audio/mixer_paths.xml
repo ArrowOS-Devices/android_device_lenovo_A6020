@@ -58,10 +58,10 @@
     <ctl name="IIR1 INP2 Volume" value="84" />
     <ctl name="IIR1 INP3 Volume" value="84" />
     <ctl name="IIR1 INP4 Volume" value="84" />
-    <ctl name="ADC1 Volume" value="7" />
-    <ctl name="ADC2 Volume" value="7" />
-    <ctl name="ADC3 Volume" value="7" />
-    <ctl name="DEC1 Volume" value="95" />
+    <ctl name="ADC1 Volume" value="8" />
+    <ctl name="ADC2 Volume" value="8" />
+    <ctl name="ADC3 Volume" value="8" />
+    <ctl name="DEC1 Volume" value="90" />
     <ctl name="DEC2 Volume" value="90" />
     <ctl name="DEC2 MUX" value="ZERO" />
     <ctl name="DEC1 MUX" value="ZERO" />
@@ -464,6 +464,11 @@
     </path>
 
     <path name="volte-call">
+        <ctl name="ADC1 Volume" value="9" />
+        <ctl name="ADC2 Volume" value="9" />
+        <ctl name="ADC3 Volume" value="9" />
+        <ctl name="DEC1 Volume" value="84" />
+        <ctl name="DEC2 Volume" value="84" />
         <ctl name="PRI_MI2S_RX_Voice Mixer VoLTE" value="1" />
         <ctl name="VoLTE_Tx Mixer TERT_MI2S_TX_VoLTE" value="1" />
    </path>
@@ -582,8 +587,8 @@
     <path name="handset-mic">
         <path name="adc1" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
-        <ctl name="ADC1 Volume" value="24" />
-        <ctl name="DEC1 Volume" value="100" />
+        <ctl name="ADC1 Volume" value="20" />
+        <ctl name="DEC1 Volume" value="95" />
     </path>
 
     <path name="headphones">
@@ -600,8 +605,8 @@
         <path name="adc2" />
         <ctl name="ADC2 MUX" value="INP2" />
         <ctl name="IIR1 INP1 MUX" value="DEC1" />
-        <ctl name="ADC2 Volume" value="24" />
-        <ctl name="DEC1 Volume" value="98" />
+        <ctl name="ADC2 Volume" value="20" />
+        <ctl name="DEC1 Volume" value="95" />
     </path>
 
     <path name="sidetone-iir">

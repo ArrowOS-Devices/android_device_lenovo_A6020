@@ -169,6 +169,8 @@ on fs
     write /sys/block/mmcblk1/queue/read_ahead_kb 1024
     write /proc/sys/vm/swappiness 100
 
+    mount none /system/etc/gps.conf /system/etc/gps_debug.conf bind
+
 on post-fs-data
     # Create folder for mm-qcamera-daemon
     mkdir /data/misc/camera 0770 camera camera

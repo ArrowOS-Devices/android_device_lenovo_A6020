@@ -68,8 +68,6 @@ void configure_variant(bool fhd, bool dualsim = true, bool is3gb = false){
             property_set("dalvik.vm.heapminfree", "512k");
             property_set("dalvik.vm.heapmaxfree", "8m");
 
-            // Cached apps limit
-            property_set("ro.vendor.qti.sys.fw.bg_apps_limit", "20");
         } else {
             /* Dalvik properties for 1080p/2GB
              *
@@ -81,9 +79,6 @@ void configure_variant(bool fhd, bool dualsim = true, bool is3gb = false){
             property_set("dalvik.vm.heaptargetutilization", "0.75");
             property_set("dalvik.vm.heapminfree", "2m");
             property_set("dalvik.vm.heapmaxfree", "8m");
-
-            // Cached apps limit
-            property_set("ro.vendor.qti.sys.fw.bg_apps_limit", "12");
 
             // Enable low ram flag
             property_set("ro.config.low_ram", "true");
@@ -102,9 +97,6 @@ void configure_variant(bool fhd, bool dualsim = true, bool is3gb = false){
         property_set("dalvik.vm.heaptargetutilization", "0.75");
         property_set("dalvik.vm.heapminfree", "512k");
         property_set("dalvik.vm.heapmaxfree", "8m");
-
-        // Cached apps limit
-        property_set("ro.vendor.qti.sys.fw.bg_apps_limit", "15");
 
         // Enable low ram flag
         property_set("ro.config.low_ram", "true");

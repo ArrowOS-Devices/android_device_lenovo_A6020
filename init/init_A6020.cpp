@@ -103,6 +103,8 @@ void configure_variant(bool fhd, bool dualsim = true, bool is3gb = false){
             property_set("dalvik.vm.heapminfree", "512k");
             property_set("dalvik.vm.heapmaxfree", "8m");
 
+            // Disable low ram flag
+            property_set("ro.config.low_ram", "false");
         } else {
             /* Dalvik properties for 1080p/2GB
              *
@@ -114,9 +116,6 @@ void configure_variant(bool fhd, bool dualsim = true, bool is3gb = false){
             property_set("dalvik.vm.heaptargetutilization", "0.75");
             property_set("dalvik.vm.heapminfree", "2m");
             property_set("dalvik.vm.heapmaxfree", "8m");
-
-            // Enable low ram flag
-            property_set("ro.config.low_ram", "true");
         }
     } else {
         // 720p screen density
@@ -132,9 +131,6 @@ void configure_variant(bool fhd, bool dualsim = true, bool is3gb = false){
         property_set("dalvik.vm.heaptargetutilization", "0.75");
         property_set("dalvik.vm.heapminfree", "512k");
         property_set("dalvik.vm.heapmaxfree", "8m");
-
-        // Enable low ram flag
-        property_set("ro.config.low_ram", "true");
     }
 
     if (dualsim) {

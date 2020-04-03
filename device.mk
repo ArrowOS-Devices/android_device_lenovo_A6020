@@ -59,6 +59,7 @@ PRODUCT_PACKAGES += \
     copybit.msm8916 \
     hwcomposer.msm8916 \
     libgenlock \
+    libtinyxml \
     memtrack.msm8916
 
 PRODUCT_PROPERTY_OVERRIDES += \

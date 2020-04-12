@@ -113,6 +113,9 @@ void configure_variant(bool fhd, bool dualsim = true, bool is3gb = false){
             property_set("dalvik.vm.heaptargetutilization", "0.75");
             property_set("dalvik.vm.heapminfree", "2m");
             property_set("dalvik.vm.heapmaxfree", "8m");
+
+            // Reduce memory footprint
+            property_set("ro.config.avoid_gfx_accel", "true");
         }
     } else {
         // 720p screen density
@@ -128,6 +131,9 @@ void configure_variant(bool fhd, bool dualsim = true, bool is3gb = false){
         property_set("dalvik.vm.heaptargetutilization", "0.75");
         property_set("dalvik.vm.heapminfree", "512k");
         property_set("dalvik.vm.heapmaxfree", "8m");
+
+        // Reduce memory footprint
+        property_set("ro.config.avoid_gfx_accel", "true");
     }
 
     if (dualsim) {

@@ -6,9 +6,5 @@
   {
     "repository": "android_vendor_lenovo_A6020",
     "target_path": "vendor/lenovo/A6020"
-  },
-  {
-    "repository" : "android_packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings"
   }
 ]

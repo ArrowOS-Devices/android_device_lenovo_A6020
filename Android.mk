@@ -1,4 +1,4 @@
-#LOCAL_PATH := $(call my-dir)
+LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),A6020)
 

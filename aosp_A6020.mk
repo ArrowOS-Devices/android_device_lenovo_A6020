@@ -24,6 +24,9 @@ $(call inherit-product, device/lenovo/A6020/device.mk)
 # Inherit some common ArrowOS stuff
 $(call inherit-product-if-exists, vendor/aosp/config/common.mk)
 
+#GAPPS
+TARGET_GAPPS_ARCH := arm64
+
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920

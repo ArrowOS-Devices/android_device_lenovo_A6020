@@ -26,7 +26,9 @@ BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_PHONY_TARGETS := true
 
 #GAPPS
+$(call inherit-product, vendor/opengapps/build/opengapps-packages.mk)
 TARGET_GAPPS_ARCH := arm64
+GAPPS_VARIANT := nano
 
 # Audio
 AUDIO_FEATURE_DEEP_BUFFER_RINGTONE := true
